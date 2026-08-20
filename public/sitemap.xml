@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://virontechnologiesx.versal.app/</loc>
+    <loc>https://virontechnologiesx.vercel.app/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://virontechnologiesx.versal.app/about</loc>
+    <loc>https://virontechnologiesx.vercel.app/about</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://virontechnologiesx.versal.app/products</loc>
+    <loc>https://virontechnologiesx.vercel.app/products</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://virontechnologiesx.versal.app/products/zee-ai</loc>
+    <loc>https://virontechnologiesx.vercel.app/products/zee-ai</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://virontechnologiesx.versal.app/technology</loc>
+    <loc>https://virontechnologiesx.vercel.app/technology</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://virontechnologiesx.versal.app/projects</loc>
+    <loc>https://virontechnologiesx.vercel.app/projects</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://virontechnologiesx.versal.app/creator</loc>
+    <loc>https://virontechnologiesx.vercel.app/creator</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://virontechnologiesx.versal.app/documentation</loc>
+    <loc>https://virontechnologiesx.vercel.app/documentation</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://virontechnologiesx.versal.app/contact</loc>
+    <loc>https://virontechnologiesx.vercel.app/contact</loc>
     <priority>0.7</priority>
   </url>
 </urlset>
