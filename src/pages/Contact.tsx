@@ -1,13 +1,19 @@
 import React from 'react';
-import { Mail, ShieldCheck, Code2 } from 'lucide-react';
+import { Mail, ShieldCheck, Globe } from 'lucide-react';
 import { ContactForm } from '../components/ContactForm';
 import { companyData } from '../content/company';
+import SEO from '../components/SEO';
 
 export const Contact: React.FC = () => {
   const officialEmail = companyData.socialLinks.email || 'viron.technologies.inquiry@gmail.com';
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 space-y-16">
+      <SEO
+        title="Contact Viron Technologies | Official Inquiries"
+        description="Get in touch with Viron Technologies and founder Kartik Domra for technical inquiries, feedback, and collaboration."
+        canonical="/contact"
+      />
       
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -45,10 +51,12 @@ export const Contact: React.FC = () => {
             </a>
 
             <div className="flex items-start space-x-3 p-4 rounded-xl bg-surface border border-white/5">
-              <Code2 className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+              <Globe className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
               <div>
-                <div className="font-semibold text-white">GitHub Organization</div>
-                <div className="text-gray-400 font-mono">github.com/virontechnologies</div>
+                <div className="font-semibold text-white">Official Web Domain</div>
+                <a href="https://virontechnologiesx.vercel.app/" className="text-cyan-400 font-mono hover:underline">
+                  virontechnologiesx.vercel.app
+                </a>
               </div>
             </div>
 

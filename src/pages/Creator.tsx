@@ -1,13 +1,21 @@
 import React from 'react';
-import { UserCheck, CheckCircle2, GraduationCap, Award } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { UserCheck, CheckCircle2, GraduationCap, Award, ArrowRight } from 'lucide-react';
 import { SpotlightCard } from '../components/react-bits/SpotlightCard';
 import { ShinyText } from '../components/react-bits/ShinyText';
 import { ParticleBackground } from '../components/react-bits/ParticleBackground';
 import { creatorData } from '../content/creator';
+import { companyData } from '../content/company';
+import SEO from '../components/SEO';
 
 export const Creator: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 space-y-16 relative z-10">
+    <article className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 space-y-16 relative z-10">
+      <SEO
+        title="Kartik Domra — Founder of Viron Technologies"
+        description="Official profile of Kartik Domra, Founder & Lead Architect of Viron Technologies and creator of Zee AI operating system."
+        canonical="/creator"
+      />
       <ParticleBackground particleCount={150} />
 
       {/* Header Profile Hero with 3D Spotlight Card */}
@@ -22,20 +30,28 @@ export const Creator: React.FC = () => {
             </div>
 
             <div>
-              <h1 className="text-3xl font-extrabold text-white">{creatorData.name}</h1>
-              <p className="text-sm font-mono text-cyan-400 font-semibold">{creatorData.role}</p>
-              <p className="text-xs font-mono text-gray-400 mt-1">{creatorData.company}</p>
+              <h1 className="text-3xl font-extrabold text-white tracking-tight">
+                {creatorData.name}
+              </h1>
+              <h2 className="text-base font-mono text-cyan-400 font-semibold mt-1">
+                Founder of {companyData.name}
+              </h2>
+              <p className="text-xs font-mono text-gray-400 mt-1">{creatorData.role}</p>
             </div>
           </div>
 
           <div className="lg:col-span-8 space-y-4">
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
               <Award className="w-3.5 h-3.5" />
-              <span>VERIFIED FOUNDER & CREATOR PROFILE</span>
+              <span>Kartik Domra — Founder of Viron Technologies</span>
             </div>
 
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
               {creatorData.bio}
+            </p>
+
+            <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
+              As the Founder and Lead Architect of <Link to="/about" className="text-cyan-400 hover:underline font-medium">Viron Technologies</Link>, Kartik Domra designs intelligent systems bridging cloud AI capability with desktop and mobile boundaries, including the flagship <Link to="/products/zee-ai" className="text-cyan-400 hover:underline font-medium">Zee AI Personal OS</Link>.
             </p>
 
             <div className="p-4 rounded-xl bg-surface border border-white/10 text-xs text-gray-300 space-y-1">
@@ -44,6 +60,17 @@ export const Creator: React.FC = () => {
                 <span>Background & Experience:</span>
               </div>
               <p className="pl-6 text-gray-400">{creatorData.education}</p>
+            </div>
+
+            <div className="flex items-center space-x-4 pt-2">
+              <Link to="/about" className="text-xs font-mono text-cyan-400 hover:underline inline-flex items-center">
+                <span>About Viron Technologies</span>
+                <ArrowRight className="w-3.5 h-3.5 ml-1" />
+              </Link>
+              <Link to="/products/zee-ai" className="text-xs font-mono text-cyan-400 hover:underline inline-flex items-center">
+                <span>Explore Flagship Zee AI</span>
+                <ArrowRight className="w-3.5 h-3.5 ml-1" />
+              </Link>
             </div>
           </div>
 
@@ -100,6 +127,6 @@ export const Creator: React.FC = () => {
         </div>
       </div>
 
-    </div>
+    </article>
   );
 };

@@ -5,10 +5,16 @@ import { SpotlightCard } from '../components/react-bits/SpotlightCard';
 import { ShinyText } from '../components/react-bits/ShinyText';
 import { ParticleBackground } from '../components/react-bits/ParticleBackground';
 import { projectsData } from '../content/projects';
+import SEO from '../components/SEO';
 
 export const Projects: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 space-y-16 relative z-10">
+      <SEO
+        title="Engineering Projects & Subsystems | Viron Technologies"
+        description="Overview of core software engineering projects and companion subsystems developed by Viron Technologies."
+        canonical="/projects"
+      />
       <ParticleBackground particleCount={140} />
 
       {/* Header */}

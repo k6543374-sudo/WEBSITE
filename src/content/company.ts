@@ -48,7 +48,6 @@ export const companyData: CompanyInfo = {
     }
   ],
   socialLinks: {
-    github: "https://github.com",
     email: "viron.technologies.inquiry@gmail.com"
   }
 };

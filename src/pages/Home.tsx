@@ -8,10 +8,16 @@ import { ShinyText } from '../components/react-bits/ShinyText';
 import { companyData } from '../content/company';
 import { zeeAIData } from '../content/zee-ai';
 import { creatorData } from '../content/creator';
+import SEO from '../components/SEO';
 
 export const Home: React.FC = () => {
   return (
     <div className="space-y-24 pb-20 relative overflow-hidden">
+      <SEO
+        title="Viron Technologies | Flagship Product Zee AI OS"
+        description="Official website of Viron Technologies. Creators of Zee AI, the modular personal AI operating system founded by Kartik Domra."
+        canonical="/"
+      />
       
       {/* 3D PARTICLE CONSTELLATION & GRID BACKGROUND */}
       <ParticleBackground particleCount={220} />

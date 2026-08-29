@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Cpu, ArrowUpRight, Code2, Mail } from 'lucide-react';
+import { ShieldCheck, Cpu, ArrowUpRight, Globe, Mail } from 'lucide-react';
 import { companyData } from '../content/company';
 
 export const Footer: React.FC = () => {
@@ -80,8 +80,10 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-xs text-gray-400">
               <li className="flex items-center space-x-2">
-                <Code2 className="w-3.5 h-3.5 text-cyan-400" />
-                <span>GitHub Repository</span>
+                <Globe className="w-3.5 h-3.5 text-cyan-400" />
+                <a href="https://virontechnologiesx.vercel.app/" className="font-mono text-cyan-400 hover:underline">
+                  virontechnologiesx.vercel.app
+                </a>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="w-3.5 h-3.5 text-cyan-400" />

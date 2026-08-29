@@ -6,6 +6,7 @@ import { ParticleBackground } from '../components/react-bits/ParticleBackground'
 import { SpotlightCard } from '../components/react-bits/SpotlightCard';
 import { ShinyText } from '../components/react-bits/ShinyText';
 import { zeeAIData } from '../content/zee-ai';
+import SEO from '../components/SEO';
 
 export const ZeeAIProduct: React.FC = () => {
   const [orbState, setOrbState] = useState<'idle' | 'listening' | 'thinking' | 'speaking'>('idle');
@@ -34,6 +35,11 @@ export const ZeeAIProduct: React.FC = () => {
 
   return (
     <div className="pt-32 pb-24 space-y-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <SEO
+        title="Zee AI OS | Personal AI Operating System | Viron Technologies"
+        description="Zee AI is a modular personal AI operating system featuring 13 autonomous agents, dual-brain LLM routing, and Guardian consent framework created by Kartik Domra."
+        canonical="/products/zee-ai"
+      />
       <ParticleBackground particleCount={160} />
 
       {/* 1. HERO OVERVIEW SECTION */}

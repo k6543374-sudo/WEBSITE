@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { BookOpen, Search, ChevronRight, FileText } from 'lucide-react';
 import { documentationData } from '../content/documentation';
+import SEO from '../components/SEO';
 
 export const Documentation: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -26,6 +27,11 @@ export const Documentation: React.FC = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 space-y-10">
+      <SEO
+        title="Documentation & Architecture Specs | Viron Technologies"
+        description="Technical documentation and architectural guides for Zee AI OS and Viron Technologies subsystems."
+        canonical="/documentation"
+      />
       
       {/* Header */}
       <div className="space-y-4">

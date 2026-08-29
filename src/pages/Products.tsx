@@ -5,10 +5,16 @@ import { SpotlightCard } from '../components/react-bits/SpotlightCard';
 import { ShinyText } from '../components/react-bits/ShinyText';
 import { ParticleBackground } from '../components/react-bits/ParticleBackground';
 import { zeeAIData } from '../content/zee-ai';
+import SEO from '../components/SEO';
 
 export const Products: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 space-y-16 relative z-10">
+      <SEO
+        title="Products Ecosystem | Viron Technologies"
+        description="Explore the intelligent software product suite engineered by Viron Technologies, including flagship Zee AI OS."
+        canonical="/products"
+      />
       <ParticleBackground particleCount={150} />
 
       {/* Header */}

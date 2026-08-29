@@ -1,10 +1,16 @@
 import React from 'react';
 import { Code2, CheckCircle2 } from 'lucide-react';
 import { technologyData } from '../content/technology';
+import SEO from '../components/SEO';
 
 export const Technology: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 space-y-16">
+      <SEO
+        title="Technology & Architecture | Viron Technologies"
+        description="Discover the technical architecture behind Viron Technologies, from Model Context Protocol (MCP) to dual-brain AI routing and Guardian security."
+        canonical="/technology"
+      />
       
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">

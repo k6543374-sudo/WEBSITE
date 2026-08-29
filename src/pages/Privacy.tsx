@@ -1,10 +1,16 @@
 import React from 'react';
 import { ShieldCheck } from 'lucide-react';
 import { companyData } from '../content/company';
+import SEO from '../components/SEO';
 
 export const Privacy: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 space-y-8">
+      <SEO
+        title="Privacy Policy | Viron Technologies"
+        description="Official Privacy Policy and local-first data protection standards of Viron Technologies."
+        canonical="/privacy"
+      />
       <div className="space-y-4 text-center">
         <div className="inline-flex items-center space-x-2 px-4 py-1 rounded-full glass-panel border border-cyan-500/30 text-cyan-400 text-xs font-mono">
           <ShieldCheck className="w-4 h-4" />
