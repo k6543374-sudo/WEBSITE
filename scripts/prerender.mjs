@@ -6,7 +6,8 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { dirname, extname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-core';
+import chromium from '@sparticuz/chromium';
 
 const DIST = fileURLToPath(new URL('../dist', import.meta.url));
 
@@ -64,8 +65,9 @@ const port = server.address().port;
 console.log(`prerender: serving dist/ on http://127.0.0.1:${port}`);
 
 const browser = await puppeteer.launch({
-  headless: true,
-  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  headless: 'shell',
+  args: chromium.args,
+  executablePath: await chromium.executablePath(),
 });
 
 try {
