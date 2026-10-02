@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    },
+    {
+      "source": "/zee120.html",
+      "destination": "/zee120.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
