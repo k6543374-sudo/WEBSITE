@@ -28,6 +28,7 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Home', path: '/', icon: Cpu },
     { name: 'About', path: '/about', icon: Layers },
+    { name: 'zee120', path: '/zee120.html', icon: Sparkles },
     { name: 'Products', path: '/products', icon: Sparkles, badge: 'Zee AI' },
     { name: 'Technology', path: '/technology', icon: Code2 },
     { name: 'Projects', path: '/projects', icon: Cpu },
@@ -77,7 +78,7 @@ export const Navbar: React.FC = () => {
               return (
                 <Link
                   key={link.path}
-                  to={link.path}
+                  to={link.path} reloadDocument={link.path.endsWith('.html')}
                   className={`relative px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-200 flex items-center space-x-1.5 ${
                     active
                       ? 'text-white bg-white/10 shadow-inner border border-cyan-400/30'
@@ -138,7 +139,7 @@ export const Navbar: React.FC = () => {
             return (
               <Link
                 key={link.path}
-                to={link.path}
+                to={link.path} reloadDocument={link.path.endsWith('.html')}
                 className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium transition-all ${
                   active
                     ? 'bg-surface-light text-cyan-400 border border-cyan-500/30'
