@@ -1,0 +1,11 @@
+{
+  "name": "zee120-brain",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-03",
+  "workers_dev": true,
+  "vars": {
+    "RATE_LIMIT_MAX": "20",
+    "RATE_LIMIT_WINDOW": "60",
+    "RETRY_ATTEMPTS": "1"
+  }
+}
