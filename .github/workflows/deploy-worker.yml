@@ -1,0 +1,37 @@
+name: Deploy zee120 brain
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: zee120-brain-deploy
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - name: Fetch pinned upstream Worker
+        run: |
+          curl --fail --silent --show-error --location https://raw.githubusercontent.com/Sophomoresty/gemini-web2api/2bb988bfcbb82a7fab5d2c99aa5560ff40d64f7e/cloudflare/worker.js --output cloudflare/worker.js
+          echo "7ef959c056881d843e51f383f9568fddd27a3b4a4ba96550d135c8ec4fd3a849  cloudflare/worker.js" | sha256sum --check
+      - name: Check deployment secrets
+        env:
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          API_KEYS: ${{ secrets.ZEE120_PROXY_API_KEYS }}
+        run: |
+          test -n "$TOKEN" || { echo "Add CLOUDFLARE_API_TOKEN in repository secrets."; exit 1; }
+          test -n "$API_KEYS" || { echo "Add ZEE120_PROXY_API_KEYS as a JSON array containing a private proxy key."; exit 1; }
+          python -c 'import json,os; k=json.loads(os.environ["API_KEYS"]); assert isinstance(k,list) and len(k)==1 and isinstance(k[0],str) and len(k[0])>=32, "Use a private random key of at least 32 characters"'
+      - name: Deploy anonymous Worker with private proxy authentication
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 86b22e20d29400c431e55ce767c06baf
+          workingDirectory: cloudflare
+          command: deploy
+          secrets: |
+            API_KEYS
+        env:
+          API_KEYS: ${{ secrets.ZEE120_PROXY_API_KEYS }}
