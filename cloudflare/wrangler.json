@@ -6,6 +6,7 @@
   "vars": {
     "RATE_LIMIT_MAX": "20",
     "RATE_LIMIT_WINDOW": "60",
-    "RETRY_ATTEMPTS": "1"
+    "RETRY_ATTEMPTS": "1",
+    "GEMINI_BL": "boq_gemini-web-uiserver_20261106.06_p0"
   }
 }
