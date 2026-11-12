@@ -25,7 +25,7 @@ import SEO from '../components/SEO';
 
 const TICKER_ITEMS = [
   'AI ASSISTANT BETA',
-  'ZEE120 CHATBOT',
+  'ZEE120 AI MODEL',
   'DUAL-BRAIN ROUTING',
   'MULTI-AGENT SYSTEMS',
   'GUARDIAN SECURITY',
@@ -38,7 +38,7 @@ export const Home: React.FC = () => {
     <div className="relative overflow-hidden">
       <SEO
         title="Viron Technologies | Futuristic AI Software & Intelligent Systems"
-        description="Viron Technologies builds next-generation AI software: a flagship AI assistant now in beta, the zee120 web chatbot, and the Zee AI personal operating system in active development."
+        description="Viron Technologies builds next-generation AI software: a flagship AI assistant now in beta, public testing of our zee120 AI model, and the Zee AI personal operating system in active development."
         canonical="/"
       />
       <div className="grain-overlay" />
@@ -84,7 +84,7 @@ export const Home: React.FC = () => {
               className="w-full sm:w-auto px-6 py-4 rounded-xl text-sm font-semibold text-cyan-300 glass-panel hover:bg-white/10 border border-cyan-500/30 transition-all duration-300 flex items-center justify-center space-x-2"
             >
               <MessageSquare className="w-4 h-4 text-cyan-400" />
-              <span>Chat with zee120</span>
+              <span>Test zee120</span>
             </a>
           </div>
 
@@ -241,12 +241,12 @@ export const Home: React.FC = () => {
                   <span>Live & Free</span>
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-white">zee120 Chatbot</h3>
+              <h3 className="text-xl font-bold text-white">zee120 AI Model</h3>
               <p className="text-gray-400 text-xs leading-relaxed">
-                A free AI chatbot running right here on this website. No signup, no download - just open and chat.
+                Our own AI model in free public testing, right here on this website. No signup, no download - open it and put the model to the test.
               </p>
               <a href="/zee120.html" className="inline-flex items-center space-x-2 text-xs font-mono text-cyan-300 hover:text-cyan-200 transition-colors py-3 -my-1 pr-2">
-                <span>Open chat</span>
+                <span>Test the model</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </SpotlightCard>

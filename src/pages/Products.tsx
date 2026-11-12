@@ -31,7 +31,7 @@ export const Products: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 space-y-20 relative z-10">
       <SEO
         title="Products | Viron Technologies"
-        description="The Viron Technologies product lineup: a flagship AI assistant in live beta, the free zee120 web chatbot, and the Zee AI personal operating system in active development."
+        description="The Viron Technologies product lineup: a flagship AI assistant in live beta, the zee120 AI model in free public testing, and the Zee AI personal operating system in active development."
         canonical="/products"
       />
       <ParticleBackground particleCount={140} />
@@ -151,20 +151,20 @@ export const Products: React.FC = () => {
           </div>
 
           <div>
-            <h2 className="text-2xl font-extrabold text-white">zee120 Chatbot</h2>
-            <span className="text-xs font-mono text-cyan-400">Runs entirely on this website</span>
+            <h2 className="text-2xl font-extrabold text-white">zee120 AI Model</h2>
+            <span className="text-xs font-mono text-cyan-400">Public model testing, live on this website</span>
           </div>
 
           <p className="text-gray-300 text-sm leading-relaxed">
-            Our free web chatbot. No account, no install, no cost - open the chat page and start
-            talking. Powered by Viron's own AI routing layer.
+            Our own AI model, open for everyone to test. No account, no install, no cost - open the
+            testing page and try the model yourself. Powered by Viron's own AI routing layer.
           </p>
 
           <a
             href="/zee120.html"
             className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 shadow-lg shadow-cyan-500/25 transition-all hover:scale-105"
           >
-            <span>Open zee120 Chat</span>
+            <span>Test zee120</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </SpotlightCard>

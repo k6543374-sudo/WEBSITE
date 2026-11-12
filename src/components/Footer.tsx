@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="/zee120.html" className="text-cyan-400 font-semibold flex items-center min-h-[40px] hover:underline">
-                  zee120 Chatbot
+                  zee120 AI Model
                   <ArrowUpRight className="w-3 h-3 ml-1" />
                 </a>
               </li>
