@@ -31,7 +31,7 @@ export const Products: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 space-y-20 relative z-10">
       <SEO
         title="Products | Viron Technologies"
-        description="The Viron Technologies product lineup: a flagship AI assistant in live beta, the zee120 AI model in free public testing, and the Zee AI personal operating system in active development."
+        description="The Viron Technologies product lineup: the Zee Spark flagship AI assistant in live beta, the zee120 AI model in free public testing, and the Zee AI personal operating system in active development."
         canonical="/products"
       />
       <ParticleBackground particleCount={140} />
@@ -52,7 +52,7 @@ export const Products: React.FC = () => {
         </p>
       </Reveal>
 
-      {/* FLAGSHIP: unnamed AI assistant */}
+      {/* FLAGSHIP: Zee Spark AI assistant */}
       <Reveal className="relative z-10">
         <SpotlightCard
           className="p-8 sm:p-12 border-purple-500/50 bg-gradient-to-br from-surface to-surface-light shadow-2xl"
@@ -61,9 +61,6 @@ export const Products: React.FC = () => {
           <div className="flex flex-wrap gap-2 mb-4 lg:mb-0 lg:absolute lg:top-0 lg:right-0 lg:p-4 lg:flex-col lg:items-end">
             <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-purple-500/20 text-purple-300 border border-purple-500/40">
               FLAGSHIP
-            </span>
-            <span className="px-3 py-1 rounded-full text-[10px] font-mono bg-pink-500/10 text-pink-300 border border-pink-500/30">
-              NAME REVEAL COMING SOON
             </span>
           </div>
 
@@ -74,17 +71,16 @@ export const Products: React.FC = () => {
                   <Bot className="w-7 h-7" />
                 </div>
                 <div>
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Our Next-Gen AI Assistant</h2>
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Zee Spark</h2>
                   <span className="text-xs font-mono text-purple-300">Live Beta &bull; Web + Android</span>
                 </div>
               </div>
 
               <p className="text-gray-300 text-sm leading-relaxed">
-                A personal AI assistant that goes beyond chat. Four specialist helper agents -
-                a Planner, a Researcher, a Reviewer and a Writer - team up on every request.
-                It browses the live web for current answers, connects to Gmail and Calendar,
-                creates documents, and syncs across the web app and its Android app.
-                The official name stays secret until the big reveal.
+                Zee Spark is a personal AI assistant that goes beyond chat. Four specialist
+                helper agents - a Planner, a Researcher, a Reviewer and a Writer - team up on
+                every request. It browses the live web for current answers, connects to Gmail
+                and Calendar, creates documents, and syncs across the web app and its Android app.
               </p>
 
               <div className="grid grid-cols-2 gap-3 text-xs text-gray-300">

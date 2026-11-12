@@ -62,7 +62,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-0 text-xs text-gray-400">
               <li>
                 <Link to="/products" className="text-purple-400 font-semibold flex items-center min-h-[40px] hover:underline">
-                  Flagship AI Assistant (Beta)
+                  Zee Spark AI Assistant (Beta)
                   <ArrowUpRight className="w-3 h-3 ml-1" />
                 </Link>
               </li>

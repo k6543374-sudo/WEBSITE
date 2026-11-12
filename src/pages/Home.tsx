@@ -38,7 +38,7 @@ export const Home: React.FC = () => {
     <div className="relative overflow-hidden">
       <SEO
         title="Viron Technologies | Futuristic AI Software & Intelligent Systems"
-        description="Viron Technologies builds next-generation AI software: a flagship AI assistant now in beta, public testing of our zee120 AI model, and the Zee AI personal operating system in active development."
+        description="Viron Technologies builds next-generation AI software: the Zee Spark flagship AI assistant now in beta, public testing of our zee120 AI model, and the Zee AI personal operating system in active development."
         canonical="/"
       />
       <div className="grain-overlay" />
@@ -136,7 +136,7 @@ export const Home: React.FC = () => {
         </Reveal>
       </section>
 
-      {/* FLAGSHIP TEASER - unnamed next-gen assistant */}
+      {/* FLAGSHIP TEASER - Zee Spark assistant */}
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 z-10">
         <Reveal>
           <SpotlightCard className="relative p-8 sm:p-12 border-purple-500/40 bg-gradient-to-br from-surface via-surface to-surface-light shadow-2xl overflow-hidden">
@@ -152,9 +152,6 @@ export const Home: React.FC = () => {
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse-dot" />
                     <span>LIVE BETA</span>
                   </span>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-xs font-mono">
-                    NAME REVEAL COMING SOON
-                  </span>
                 </div>
 
                 <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
@@ -163,10 +160,9 @@ export const Home: React.FC = () => {
                 </h2>
 
                 <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                  Our next-generation AI assistant is already running in beta. It chats, plans,
-                  researches, browses the live web, connects to Gmail and creates documents -
-                  from the browser or its Android app. Its official name is under wraps and
-                  will be revealed soon.
+                  Meet Zee Spark - our flagship AI assistant, already running in beta. It chats,
+                  plans, researches, browses the live web, connects to Gmail and creates
+                  documents - from the browser or its Android app.
                 </p>
 
                 <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -218,10 +214,10 @@ export const Home: React.FC = () => {
                   <span>Live Beta</span>
                 </span>
               </div>
-              <h3 className="text-2xl font-bold text-white">Flagship AI Assistant</h3>
+              <h3 className="text-2xl font-bold text-white">Zee Spark</h3>
               <p className="text-gray-400 text-sm leading-relaxed max-w-md">
                 Chat, plan, research and browse the live web with four specialist helper agents.
-                Works on the web and as an Android app. Official name reveal coming soon.
+                Works on the web and as an Android app.
               </p>
               <Link to="/products" className="inline-flex items-center space-x-2 text-xs font-mono text-purple-300 hover:text-purple-200 transition-colors py-3 -my-1 pr-2">
                 <span>Open product deck</span>
