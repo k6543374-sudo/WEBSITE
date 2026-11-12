@@ -5,11 +5,6 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Products } from './pages/Products';
-import { ZeeAIProduct } from './pages/ZeeAIProduct';
-import { Technology } from './pages/Technology';
-import { Projects } from './pages/Projects';
-import { Creator } from './pages/Creator';
-import { Documentation } from './pages/Documentation';
 import { Contact } from './pages/Contact';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
@@ -34,13 +29,8 @@ export const App: React.FC = () => {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/products/zee-ai" element={<ZeeAIProduct />} />
-            <Route path="/technology" element={<Technology />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/creator" element={<Creator />} />
-            <Route path="/documentation" element={<Documentation />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />

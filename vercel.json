@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    { "source": "/technology", "destination": "/about", "permanent": true },
+    { "source": "/projects", "destination": "/products", "permanent": true },
+    { "source": "/creator", "destination": "/about", "permanent": true },
+    { "source": "/documentation", "destination": "/about", "permanent": true },
+    { "source": "/products/zee-ai", "destination": "/products", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/api/:path*",

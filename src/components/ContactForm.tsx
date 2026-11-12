@@ -8,7 +8,7 @@ export const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: 'Zee AI Feature Suggestion',
+    subject: 'AI Assistant Beta Access',
     message: ''
   });
 
@@ -55,7 +55,7 @@ export const ContactForm: React.FC = () => {
 
         <button
           onClick={handleCopyEmail}
-          className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-xs font-mono text-cyan-300 transition-colors"
+          className="inline-flex items-center space-x-1.5 px-4 py-2.5 rounded-full bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-xs font-mono text-cyan-300 transition-colors"
         >
           <Copy className="w-3.5 h-3.5 text-cyan-400" />
           <span>{copied ? 'Copied Email!' : 'Copy Email Address'}</span>
@@ -128,7 +128,8 @@ export const ContactForm: React.FC = () => {
               onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
               className="w-full px-4 py-2.5 rounded-lg bg-surface border border-white/10 text-white text-sm focus:outline-none focus:border-cyan-500 transition-colors"
             >
-              <option value="Zee AI Feature Suggestion">Zee AI Feature & Architecture Suggestion</option>
+              <option value="AI Assistant Beta Access">AI Assistant Beta Access Request</option>
+              <option value="Zee AI Feature Suggestion">Zee AI OS Feature Suggestion</option>
               <option value="Zee AI Technical Inquiry">Zee AI Technical Inquiry</option>
               <option value="AI Research & Multi-Agent">AI Research & Multi-Agent Collaboration</option>
               <option value="General Inquiry">General Company Inquiry</option>

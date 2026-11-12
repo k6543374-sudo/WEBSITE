@@ -12,11 +12,11 @@ export const Footer: React.FC = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-cyan-500/5 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
-          
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="flex items-center space-x-3 group">
+            <Link to="/" className="flex items-center space-x-3 group py-1">
               <div className="w-9 h-9 rounded-lg border border-cyan-500/40 bg-surface p-1 shadow-lg shadow-cyan-500/10">
                 <img
                   src="/images/viron_logo.png"
@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
               </span>
             </Link>
             <p className="text-gray-400 text-xs leading-relaxed max-w-sm">
-              {companyData.tagline}. Architectural engineering centered on modular multi-agent orchestration, local-first privacy, and dynamic dual-brain LLM execution.
+              {companyData.tagline}. Engineering futuristic AI software - autonomous agents, dual-brain model routing, and consent-first security.
             </p>
             <div className="flex items-center space-x-3 pt-2">
               <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
@@ -44,14 +44,13 @@ export const Footer: React.FC = () => {
           {/* Navigation Links */}
           <div>
             <h4 className="font-display font-semibold text-sm text-white tracking-wider uppercase mb-4">
-              Company
+              Explore
             </h4>
-            <ul className="space-y-2.5 text-xs text-gray-400">
-              <li><Link to="/" className="hover:text-cyan-400 transition-colors">Home</Link></li>
-              <li><Link to="/about" className="hover:text-cyan-400 transition-colors">About Viron</Link></li>
-              <li><Link to="/creator" className="hover:text-cyan-400 transition-colors">Creator & Founder</Link></li>
-              <li><Link to="/projects" className="hover:text-cyan-400 transition-colors">Engineering Projects</Link></li>
-              <li><Link to="/contact" className="hover:text-cyan-400 transition-colors">Contact Us</Link></li>
+            <ul className="space-y-0 text-xs text-gray-400">
+              <li><Link to="/" className="inline-flex items-center min-h-[40px] hover:text-cyan-400 transition-colors">Home</Link></li>
+              <li><Link to="/products" className="inline-flex items-center min-h-[40px] hover:text-cyan-400 transition-colors">Products</Link></li>
+              <li><Link to="/about" className="inline-flex items-center min-h-[40px] hover:text-cyan-400 transition-colors">About & Founder</Link></li>
+              <li><Link to="/contact" className="inline-flex items-center min-h-[40px] hover:text-cyan-400 transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -60,38 +59,44 @@ export const Footer: React.FC = () => {
             <h4 className="font-display font-semibold text-sm text-white tracking-wider uppercase mb-4">
               Products
             </h4>
-            <ul className="space-y-2.5 text-xs text-gray-400">
+            <ul className="space-y-0 text-xs text-gray-400">
               <li>
-                <Link to="/products/zee-ai" className="text-cyan-400 font-semibold flex items-center hover:underline">
-                  Zee AI OS
+                <Link to="/products" className="text-purple-400 font-semibold flex items-center min-h-[40px] hover:underline">
+                  Flagship AI Assistant (Beta)
                   <ArrowUpRight className="w-3 h-3 ml-1" />
                 </Link>
               </li>
-              <li><Link to="/products" className="hover:text-cyan-400 transition-colors">Product Ecosystem</Link></li>
-              <li><Link to="/technology" className="hover:text-cyan-400 transition-colors">Technology Stack</Link></li>
-              <li><Link to="/documentation" className="hover:text-cyan-400 transition-colors">Architecture Docs</Link></li>
+              <li>
+                <a href="/zee120.html" className="text-cyan-400 font-semibold flex items-center min-h-[40px] hover:underline">
+                  zee120 Chatbot
+                  <ArrowUpRight className="w-3 h-3 ml-1" />
+                </a>
+              </li>
+              <li><Link to="/products" className="inline-flex items-center min-h-[40px] hover:text-cyan-400 transition-colors">Zee AI Operating System</Link></li>
             </ul>
           </div>
+        </div>
 
-          {/* Contact / Social */}
-          <div>
-            <h4 className="font-display font-semibold text-sm text-white tracking-wider uppercase mb-4">
-              Official Links
-            </h4>
-            <ul className="space-y-2.5 text-xs text-gray-400">
-              <li className="flex items-center space-x-2">
-                <Globe className="w-3.5 h-3.5 text-cyan-400" />
-                <a href="https://virontechnologiesx.vercel.app/" className="font-mono text-cyan-400 hover:underline">
-                  virontechnologiesx.vercel.app
-                </a>
-              </li>
-              <li className="flex items-center space-x-2">
-                <Mail className="w-3.5 h-3.5 text-cyan-400" />
-                <a href={`mailto:${officialEmail}`} className="font-mono text-cyan-400 hover:underline">
-                  {officialEmail}
-                </a>
-              </li>
-            </ul>
+        {/* Official Links row */}
+        <div className="py-8 border-b border-white/10 flex flex-col sm:flex-row items-start sm:items-center gap-4 text-xs text-gray-400">
+          <span className="flex items-center space-x-2 min-h-[40px]">
+            <Globe className="w-3.5 h-3.5 text-cyan-400" />
+            <a href="https://virontechnologiesx.vercel.app/" className="font-mono text-cyan-400 hover:underline py-3">
+              virontechnologiesx.vercel.app
+            </a>
+          </span>
+          <span className="flex items-center space-x-2 min-h-[40px]">
+            <Mail className="w-3.5 h-3.5 text-cyan-400" />
+            <a href={`mailto:${officialEmail}`} className="font-mono text-cyan-400 hover:underline py-3 break-all">
+              {officialEmail}
+            </a>
+          </span>
+        </div>
+
+        {/* Giant wordmark */}
+        <div className="pt-10 pb-2 select-none pointer-events-none" aria-hidden="true">
+          <div className="text-center font-display font-extrabold tracking-tighter leading-none text-stroke-faint text-[22vw] lg:text-[11rem]">
+            VIRON
           </div>
         </div>
 
@@ -101,8 +106,8 @@ export const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} {companyData.name}. Founder & Chief Architect: <span className="text-gray-300 font-medium">Kartik Domra</span>. All rights reserved.
           </div>
           <div className="flex items-center space-x-6">
-            <Link to="/privacy" className="hover:text-gray-400 transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-gray-400 transition-colors">Terms of Service</Link>
+            <Link to="/privacy" className="inline-flex items-center min-h-[40px] hover:text-gray-400 transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="inline-flex items-center min-h-[40px] hover:text-gray-400 transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

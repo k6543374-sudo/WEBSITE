@@ -13,13 +13,8 @@ const DIST = fileURLToPath(new URL('../dist', import.meta.url));
 
 const ROUTES = [
   '/',
-  '/about',
   '/products',
-  '/products/zee-ai',
-  '/technology',
-  '/projects',
-  '/creator',
-  '/documentation',
+  '/about',
   '/contact',
   '/privacy',
   '/terms',

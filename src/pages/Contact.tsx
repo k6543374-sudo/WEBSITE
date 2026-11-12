@@ -27,7 +27,7 @@ export const Contact: React.FC = () => {
         </h1>
 
         <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-          Reach out for technical inquiries regarding Zee AI, feature suggestions, autonomous agent systems research, or company updates.
+          Reach out for beta access, product feedback, collaboration ideas, or anything else - we read every message.
         </p>
       </div>
 
@@ -43,18 +43,18 @@ export const Contact: React.FC = () => {
               className="flex items-start space-x-3 p-4 rounded-xl bg-surface border border-white/5 hover:border-cyan-500/40 transition-colors group"
             >
               <Mail className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
-              <div>
+              <div className="min-w-0">
                 <div className="font-semibold text-white group-hover:text-cyan-300 transition-colors">Official Gmail Inbox</div>
-                <div className="text-cyan-400 font-mono font-semibold">{officialEmail}</div>
+                <div className="text-cyan-400 font-mono font-semibold break-all">{officialEmail}</div>
                 <div className="text-[10px] text-gray-400 mt-0.5">Suggestions and inquiries route directly here</div>
               </div>
             </a>
 
             <div className="flex items-start space-x-3 p-4 rounded-xl bg-surface border border-white/5">
               <Globe className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-              <div>
+              <div className="min-w-0">
                 <div className="font-semibold text-white">Official Web Domain</div>
-                <a href="https://virontechnologiesx.vercel.app/" className="text-cyan-400 font-mono hover:underline">
+                <a href="https://virontechnologiesx.vercel.app/" className="text-cyan-400 font-mono hover:underline break-all inline-block py-3 -my-1">
                   virontechnologiesx.vercel.app
                 </a>
               </div>

@@ -20,6 +20,11 @@ export const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
     let animationFrameId: number;
 
     try {
+      // Phones get fewer particles; reduced-motion users get a still frame.
+      const isSmallScreen = window.innerWidth < 768;
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const count = isSmallScreen ? Math.min(particleCount, 90) : particleCount;
+
       // Scene setup
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(
@@ -30,21 +35,21 @@ export const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
       );
       camera.position.z = 15;
 
-      renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, failIfMajorPerformanceCaveat: false });
+      renderer = new THREE.WebGLRenderer({ alpha: true, antialias: !isSmallScreen, failIfMajorPerformanceCaveat: false, powerPreference: 'low-power' });
       renderer.setSize(mount.clientWidth || window.innerWidth, mount.clientHeight || window.innerHeight);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       mount.appendChild(renderer.domElement);
 
       // Particle geometry
       const geometry = new THREE.BufferGeometry();
-      const positions = new Float32Array(particleCount * 3);
-      const colors = new Float32Array(particleCount * 3);
+      const positions = new Float32Array(count * 3);
+      const colors = new Float32Array(count * 3);
 
       const cyanColor = new THREE.Color('#00F0FF');
       const purpleColor = new THREE.Color('#8B5CF6');
       const blueColor = new THREE.Color('#3B82F6');
 
-      for (let i = 0; i < particleCount; i++) {
+      for (let i = 0; i < count; i++) {
         positions[i * 3] = (Math.random() - 0.5) * 35;
         positions[i * 3 + 1] = (Math.random() - 0.5) * 35;
         positions[i * 3 + 2] = (Math.random() - 0.5) * 25;
@@ -91,7 +96,7 @@ export const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
         mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
       };
 
-      window.addEventListener('mousemove', handleMouseMove);
+      if (!isSmallScreen && !prefersReduced) window.addEventListener('mousemove', handleMouseMove);
 
       const handleResize = () => {
         if (!mount || !renderer) return;
@@ -117,8 +122,8 @@ export const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
         const posArr = geometry.attributes.position.array as Float32Array;
         const linePositions: number[] = [];
 
-        for (let i = 0; i < particleCount; i++) {
-          for (let j = i + 1; j < particleCount; j++) {
+        for (let i = 0; i < count; i++) {
+          for (let j = i + 1; j < count; j++) {
             const dx = posArr[i * 3] - posArr[j * 3];
             const dy = posArr[i * 3 + 1] - posArr[j * 3 + 1];
             const dz = posArr[i * 3 + 2] - posArr[j * 3 + 2];
@@ -137,11 +142,16 @@ export const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
         animationFrameId = requestAnimationFrame(animate);
       };
 
-      animate();
+      if (prefersReduced) {
+        // Static render only: no animation loop for reduced-motion users.
+        renderer.render(scene, camera);
+      } else {
+        animate();
+      }
 
       return () => {
         cancelAnimationFrame(animationFrameId);
-        window.removeEventListener('mousemove', handleMouseMove);
+        if (!isSmallScreen && !prefersReduced) window.removeEventListener('mousemove', handleMouseMove);
         window.removeEventListener('resize', handleResize);
         if (mount && renderer && renderer.domElement && mount.contains(renderer.domElement)) {
           mount.removeChild(renderer.domElement);

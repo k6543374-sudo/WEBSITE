@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronRight, Cpu, Sparkles, Code2, BookOpen, Layers, UserCheck, Mail, Download } from 'lucide-react';
+import { Menu, X, ChevronRight, Cpu, Sparkles, Layers, Mail, MessageSquare } from 'lucide-react';
 import { companyData } from '../content/company';
 
 export const Navbar: React.FC = () => {
@@ -27,13 +27,9 @@ export const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', path: '/', icon: Cpu },
+    { name: 'Products', path: '/products', icon: Sparkles, badge: 'Beta' },
+    { name: 'zee120', path: '/zee120.html', icon: MessageSquare },
     { name: 'About', path: '/about', icon: Layers },
-    { name: 'zee120', path: '/zee120.html', icon: Sparkles },
-    { name: 'Products', path: '/products', icon: Sparkles, badge: 'Zee AI' },
-    { name: 'Technology', path: '/technology', icon: Code2 },
-    { name: 'Projects', path: '/projects', icon: Cpu },
-    { name: 'Creator', path: '/creator', icon: UserCheck },
-    { name: 'Documentation', path: '/documentation', icon: BookOpen },
     { name: 'Contact', path: '/contact', icon: Mail },
   ];
 
@@ -66,7 +62,7 @@ export const Navbar: React.FC = () => {
                 {companyData.name}
               </span>
               <span className="text-[10px] uppercase font-mono tracking-widest text-gray-400">
-                Official Intelligence System
+                Future AI Systems
               </span>
             </div>
           </Link>
@@ -79,7 +75,7 @@ export const Navbar: React.FC = () => {
                 <Link
                   key={link.path}
                   to={link.path} reloadDocument={link.path.endsWith('.html')}
-                  className={`relative px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-200 flex items-center space-x-1.5 ${
+                  className={`relative px-3.5 py-2.5 text-xs font-medium rounded-full transition-all duration-200 flex items-center space-x-1.5 ${
                     active
                       ? 'text-white bg-white/10 shadow-inner border border-cyan-400/30'
                       : 'text-gray-300 hover:text-white hover:bg-white/5'
@@ -96,23 +92,13 @@ export const Navbar: React.FC = () => {
             })}
           </nav>
 
-          {/* CTA Header Buttons */}
+          {/* CTA Header Button */}
           <div className="hidden lg:flex items-center space-x-2">
-            <a
-              href="/downloads/Zee AI Operating System.exe"
-              download="Zee AI Operating System.exe"
-              className="relative inline-flex items-center justify-center px-3.5 py-2 text-xs font-semibold text-cyan-300 transition-all bg-surface-light border border-cyan-500/40 rounded-lg shadow-md hover:bg-cyan-500/20 hover:text-white"
-              title="Download Zee AI Operating System (.exe)"
-            >
-              <Download className="w-3.5 h-3.5 mr-1 text-cyan-400" />
-              <span>Download .exe</span>
-            </a>
-
             <Link
-              to="/products/zee-ai"
-              className="relative inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white transition-all bg-gradient-to-r from-cyan-500 via-indigo-600 to-purple-600 rounded-lg shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:scale-105"
+              to="/products"
+              className="relative inline-flex items-center justify-center px-4 py-2.5 text-xs font-semibold text-white transition-all bg-gradient-to-r from-cyan-500 via-indigo-600 to-purple-600 rounded-lg shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:scale-105"
             >
-              <span>Explore Zee AI</span>
+              <span>Try the Beta</span>
               <ChevronRight className="w-3.5 h-3.5 ml-1" />
             </Link>
           </div>
@@ -161,10 +147,10 @@ export const Navbar: React.FC = () => {
 
           <div className="pt-4">
             <Link
-              to="/products/zee-ai"
+              to="/products"
               className="w-full flex items-center justify-center px-4 py-3 text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 to-indigo-600 rounded-xl shadow-lg shadow-cyan-500/25"
             >
-              <span>Explore Flagship Zee AI</span>
+              <span>Try the Beta</span>
               <ChevronRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
