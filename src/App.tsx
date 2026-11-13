@@ -8,6 +8,8 @@ import { Products } from './pages/Products';
 import { Contact } from './pages/Contact';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
+import { Updates } from './pages/Updates';
+import { UpdatePost } from './pages/UpdatePost';
 
 // Helper component to reset scroll position on navigation
 const ScrollToTop: React.FC = () => {
@@ -32,6 +34,8 @@ export const App: React.FC = () => {
             <Route path="/products" element={<Products />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/updates" element={<Updates />} />
+            <Route path="/updates/:slug" element={<UpdatePost />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
           </Routes>

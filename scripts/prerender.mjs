@@ -11,6 +11,11 @@ import chromium from '@sparticuz/chromium';
 
 const DIST = fileURLToPath(new URL('../dist', import.meta.url));
 
+// Blog routes come from the shared posts file so new posts prerender automatically.
+const posts = JSON.parse(
+  await readFile(new URL('../src/content/posts.json', import.meta.url), 'utf8')
+);
+
 const ROUTES = [
   '/',
   '/products',
@@ -18,6 +23,8 @@ const ROUTES = [
   '/contact',
   '/privacy',
   '/terms',
+  '/updates',
+  ...posts.map((p) => `/updates/${p.slug}`),
 ];
 
 const MIME = {

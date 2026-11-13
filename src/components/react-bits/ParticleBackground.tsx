@@ -167,5 +167,5 @@ export const ParticleBackground: React.FC<ParticleBackgroundProps> = ({
     }
   }, [particleCount]);
 
-  return <div ref={mountRef} className={`absolute inset-0 pointer-events-none z-0 ${className}`} />;
+  return <div ref={mountRef} className={`ambient-layer absolute inset-0 pointer-events-none z-0 ${className}`} />;
 };

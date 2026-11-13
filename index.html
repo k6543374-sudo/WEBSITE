@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en" class="dark">
   <head>
+    <script>
+      // Restore the saved color theme before first paint. Default stays dark.
+      (function () {
+        try {
+          if (localStorage.getItem('viron-theme') === 'light') {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.classList.add('light');
+          }
+        } catch (e) { /* storage unavailable: keep default dark */ }
+      })();
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/images/viron_logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

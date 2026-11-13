@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronRight, Cpu, Sparkles, Layers, Mail, MessageSquare } from 'lucide-react';
+import { Menu, X, ChevronRight, Cpu, Sparkles, Layers, Mail, MessageSquare, Newspaper } from 'lucide-react';
 import { companyData } from '../content/company';
+import { ThemeToggle } from './ThemeToggle';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,6 +30,7 @@ export const Navbar: React.FC = () => {
     { name: 'Home', path: '/', icon: Cpu },
     { name: 'Products', path: '/products', icon: Sparkles, badge: 'Beta' },
     { name: 'zee120', path: '/zee120.html', icon: MessageSquare },
+    { name: 'Updates', path: '/updates', icon: Newspaper },
     { name: 'About', path: '/about', icon: Layers },
     { name: 'Contact', path: '/contact', icon: Mail },
   ];
@@ -94,6 +96,7 @@ export const Navbar: React.FC = () => {
 
           {/* CTA Header Button */}
           <div className="hidden lg:flex items-center space-x-2">
+            <ThemeToggle />
             <Link
               to="/products"
               className="relative inline-flex items-center justify-center px-4 py-2.5 text-xs font-semibold text-white transition-all bg-gradient-to-r from-cyan-500 via-indigo-600 to-purple-600 rounded-lg shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:scale-105"
@@ -104,7 +107,8 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile Hamburger Toggle */}
-          <div className="flex lg:hidden">
+          <div className="flex lg:hidden items-center space-x-2">
+            <ThemeToggle />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-surface-light border border-white/10 focus:outline-none"

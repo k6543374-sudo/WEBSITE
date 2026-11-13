@@ -22,6 +22,8 @@ import { Reveal } from '../components/react-bits/Reveal';
 import { companyData } from '../content/company';
 import { creatorData } from '../content/creator';
 import SEO from '../components/SEO';
+import { SparkDemo } from '../components/SparkDemo';
+import { WaitlistForm } from '../components/WaitlistForm';
 
 const TICKER_ITEMS = [
   'AI ASSISTANT BETA',
@@ -188,6 +190,22 @@ export const Home: React.FC = () => {
               </div>
             </div>
           </SpotlightCard>
+        </Reveal>
+      </section>
+
+      {/* ZEE SPARK DEMO - simulated product preview */}
+      <section className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-10 z-10">
+        <Reveal className="text-center max-w-2xl mx-auto space-y-4">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Watch Zee Spark{' '}
+            <ShinyText text="in action" className="text-3xl sm:text-5xl font-extrabold" />
+          </h2>
+          <p className="text-gray-400 text-sm">
+            A simulated preview of the live beta. The real thing is one click away, free to try.
+          </p>
+        </Reveal>
+        <Reveal delay={120}>
+          <SparkDemo />
         </Reveal>
       </section>
 
@@ -361,6 +379,25 @@ export const Home: React.FC = () => {
                 </div>
               </div>
             </div>
+          </SpotlightCard>
+        </Reveal>
+      </section>
+
+      {/* WAITLIST */}
+      <section id="waitlist" className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 z-10">
+        <Reveal>
+          <SpotlightCard className="p-8 sm:p-12 border-cyan-500/30 text-center space-y-6">
+            <div className="inline-flex items-center space-x-2 px-4 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>EARLY ACCESS</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Join the Zee Spark waitlist
+            </h2>
+            <p className="text-gray-400 text-sm max-w-md mx-auto">
+              Be first in line when new Zee Spark features and products open up.
+            </p>
+            <WaitlistForm />
           </SpotlightCard>
         </Reveal>
       </section>

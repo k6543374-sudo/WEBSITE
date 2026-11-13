@@ -149,3 +149,101 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.08);
   color: transparent;
 }
+
+/* ===== Light theme overrides ===== */
+html.light {
+  color-scheme: light;
+  --color-surface: #ffffff;
+  --color-surface-light: #edf1f7;
+}
+
+html.light body {
+  background-color: #f4f6fb;
+  color: #0f172a;
+}
+
+/* Hardcoded dark surfaces */
+html.light .bg-\[\#030712\] { background-color: #f4f6fb; }
+html.light .bg-\[\#030712\]\/85 { background-color: rgba(244, 246, 251, 0.88); }
+html.light .bg-\[\#030712\]\/95 { background-color: rgba(244, 246, 251, 0.96); }
+html.light .bg-\[\#02050e\] { background-color: #e9edf5; }
+html.light .bg-\[\#02050e\]\/80 { background-color: rgba(233, 237, 245, 0.85); }
+html.light .from-\[\#030712\]\/40 { --tw-gradient-from: rgba(244, 246, 251, 0.4); }
+html.light .to-\[\#030712\] { --tw-gradient-to: #f4f6fb; }
+
+/* Text */
+html.light .text-white { color: #0f172a; }
+html.light .text-gray-100 { color: #0f172a; }
+html.light .text-gray-200 { color: #1e293b; }
+html.light .text-gray-300 { color: #334155; }
+html.light .text-gray-400 { color: #475569; }
+html.light .text-gray-500 { color: #64748b; }
+html.light .hover\:text-white:hover { color: #0f172a; }
+
+/* Keep white text on vibrant gradient buttons and badges */
+html.light [class*="bg-gradient-to-r"].text-white,
+html.light [class*="bg-gradient-to-br"].text-white { color: #ffffff; }
+
+/* Accent colors: deepen so they read on light backgrounds */
+html.light .text-cyan-300 { color: #0e7490; }
+html.light .text-cyan-400 { color: #0891b2; }
+html.light .text-purple-300 { color: #7c3aed; }
+html.light .text-purple-400 { color: #7c3aed; }
+html.light .text-emerald-300 { color: #047857; }
+html.light .text-emerald-400 { color: #059669; }
+html.light .text-pink-400 { color: #db2777; }
+html.light .text-amber-300 { color: #b45309; }
+
+/* Borders and translucent white fills */
+html.light .border-white\/5 { border-color: rgba(15, 23, 42, 0.08); }
+html.light .border-white\/10 { border-color: rgba(15, 23, 42, 0.12); }
+html.light .border-white\/15 { border-color: rgba(15, 23, 42, 0.16); }
+html.light .bg-white\/5 { background-color: rgba(15, 23, 42, 0.04); }
+html.light .bg-white\/10 { background-color: rgba(15, 23, 42, 0.08); }
+html.light .hover\:bg-white\/5:hover { background-color: rgba(15, 23, 42, 0.05); }
+html.light .hover\:bg-white\/10:hover { background-color: rgba(15, 23, 42, 0.09); }
+
+/* Glass utilities */
+html.light .glass-panel {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}
+html.light .glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(8, 145, 178, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(8, 145, 178, 0.2);
+}
+html.light .glass-pill {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+/* Chrome details */
+html.light .text-stroke-faint { -webkit-text-stroke: 1px rgba(15, 23, 42, 0.14); }
+html.light ::-webkit-scrollbar-track { background: #e9edf5; }
+html.light ::-webkit-scrollbar-thumb { background: #c3ccd9; }
+html.light ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Tone down ambient canvases so light-mode text keeps contrast */
+html.light .ambient-layer { opacity: 0.55; }
+
+/* ===== Zee Spark demo animation ===== */
+@keyframes demo-pop {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.demo-pop { animation: demo-pop 0.45s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+@keyframes demo-blink {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 1; }
+}
+.demo-dot { animation: demo-blink 1.1s ease-in-out infinite; }
+.demo-dot:nth-child(2) { animation-delay: 0.18s; }
+.demo-dot:nth-child(3) { animation-delay: 0.36s; }
+
+@keyframes demo-caret {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.demo-caret { animation: demo-caret 0.9s step-end infinite; }

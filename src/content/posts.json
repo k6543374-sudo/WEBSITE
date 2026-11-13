@@ -1,0 +1,53 @@
+[
+  {
+    "slug": "whats-next-zee-ai-os",
+    "title": "What's Next: The Zee AI Operating System",
+    "date": "2026-11-13",
+    "tags": ["Zee AI OS", "Roadmap"],
+    "excerpt": "Beyond the assistant: 13 autonomous agents, dual-brain routing, an interactive 3D orb, and consent-gated security. A look at where Viron is headed.",
+    "body": [
+      "Zee Spark is the beginning, not the destination. In development now: Zee AI, a modular personal AI operating system for the desktop.",
+      "The OS coordinates 13 autonomous agents behind one interface: an interactive 3D orb you talk to. A dual-brain routing engine sends each prompt to fast cloud models or fully offline local models, depending on the task and your privacy settings.",
+      "Security is consent-gated by design. Every sensitive action passes a risk-scored permission gateway, and nothing runs without your explicit approval.",
+      "Follow this updates page for build notes as the OS comes together."
+    ]
+  },
+  {
+    "slug": "meet-zee-spark-flagship-assistant",
+    "title": "Meet Zee Spark, Our Flagship AI Assistant",
+    "date": "2026-11-12",
+    "tags": ["Zee Spark", "Beta"],
+    "excerpt": "Zee Spark is live in beta on the web and Android: one assistant that chats, plans, researches, browses the live web, connects to Gmail and creates documents.",
+    "body": [
+      "Zee Spark is the flagship product from Viron Technologies, and it is already running in public beta. One assistant handles your chat, planning, research, live web browsing, Gmail and document creation, from the browser or the Android app.",
+      "Under the hood, four specialist helper agents share the work. Instead of one model trying to do everything, Zee Spark routes each part of a task to the specialist built for it, then brings the pieces back together into one answer.",
+      "The beta is free to try. Open the Products page to launch the web app, no download needed, or install the Android app for the full experience.",
+      "This is still a beta, which means you will hit rough edges. That is the point: every session teaches us what to fix next. Tell us what breaks through the contact page."
+    ]
+  },
+  {
+    "slug": "zee120-public-testing",
+    "title": "zee120 Is Now in Free Public Testing",
+    "date": "2026-11-12",
+    "tags": ["zee120", "AI Model"],
+    "excerpt": "The zee120 AI model is open for anyone to test, right here on this website. No signup, no download, no cost.",
+    "body": [
+      "zee120, Viron's AI model, is now open for free public testing on this website. There is no signup and nothing to install: open the testing page, type a prompt, and put the model to work.",
+      "Public testing is how we make the model better. Real questions from real people surface the failure modes that lab benchmarks miss, and every test helps us tune the routing layer that decides how zee120 answers.",
+      "A note on honesty: zee120 runs on third-party language-model technology connected through Viron's own routing layer. We built the product experience and the routing; we did not train the underlying model, and the site says so plainly.",
+      "Try it now from the zee120 link in the navigation. If a reply is slow or times out, wait a moment and try again: the testing backend is shared and can get busy."
+    ]
+  },
+  {
+    "slug": "website-v3-redesign",
+    "title": "A New Home for Viron Technologies",
+    "date": "2026-11-11",
+    "tags": ["Website", "Design"],
+    "excerpt": "Version 3 of our website: a full redesign with a 3D hero, a bento product grid, and a responsive pass for every screen size.",
+    "body": [
+      "This website is new. Version 3 is a ground-up redesign: a fullscreen 3D hero, a bento-style product grid, and a layout tested against phones, tablets and desktops.",
+      "The goal was simple. Everything Viron ships, from the Zee Spark beta to zee120 model testing to the Zee AI operating system in development, now has a clear home that works on any screen.",
+      "The site is also built to be found: prerendered pages, structured data and a sitemap so search engines see real content instead of a loading spinner."
+    ]
+  }
+]

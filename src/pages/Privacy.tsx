@@ -48,6 +48,13 @@ export const Privacy: React.FC = () => {
             Facial recognition and camera liveness checks performed by the Vision subsystem process frames strictly in local RAM memory for lockscreen authentication. No biometric templates are sold or shared.
           </p>
         </section>
+
+        <section className="space-y-2">
+          <h2 className="text-lg font-bold text-white">5. Waitlist Emails</h2>
+          <p>
+            Email addresses submitted through the Zee Spark waitlist are used only to notify you about product launches and major updates. They are never sold, rented or shared with third parties, and every message includes an unsubscribe option.
+          </p>
+        </section>
       </div>
     </div>
   );

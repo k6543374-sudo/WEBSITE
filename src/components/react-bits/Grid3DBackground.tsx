@@ -6,7 +6,7 @@ interface Grid3DBackgroundProps {
 
 export const Grid3DBackground: React.FC<Grid3DBackgroundProps> = ({ className = '' }) => {
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none z-0 ${className}`}>
+    <div className={`ambient-layer absolute inset-0 overflow-hidden pointer-events-none z-0 ${className}`}>
       {/* 3D Perspective Plane */}
       <div
         className="absolute inset-0 opacity-25"
